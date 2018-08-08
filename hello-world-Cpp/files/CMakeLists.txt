@@ -1,0 +1,7 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(hello-world-Cpp)
+
+SET(SOURCES src/main.cpp)
+
+ADD_EXECUTABLE(hello-world-Cpp ${SOURCES})
+INSTALL(TARGETS hello-world-Cpp RUNTIME DESTINATION bin)
