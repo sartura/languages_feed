@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+    php-cli /usr/include/php7/hello-world-php.php &
+}
+
+stop()  {
+    pid=`ps w | grep 'hello-world-php.php' | grep -v grep | awk '{ print $1 }'`
+    kill -9 $pid
+}
