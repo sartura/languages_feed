@@ -1,0 +1,12 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+
+start() {
+    ruby /usr/lib/ruby/hello-world-ruby.rb &
+}
+
+stop()  {
+    pid=`ps w | grep 'hello-world-ruby.rb' | grep -v grep | awk '{ print $1 }'`
+    kill -9 $pid
+}
