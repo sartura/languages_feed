@@ -1,0 +1,3 @@
+# .cargo/config
+[target.arm-unknown-linux-musleabi]
+linker = "STAGING_DIR"
